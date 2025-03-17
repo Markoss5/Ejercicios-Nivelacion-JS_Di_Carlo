@@ -1,4 +1,4 @@
-//ejercicio 1
+/*//ejercicio 1
 function saludo(){
     let nombre= document.getElementById("nombre")
     console.log(nombre.value);
@@ -64,5 +64,59 @@ numm = parseInt(numm);
 //Ejercicio 7 
 function adivinarNumero(){
     let numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+    numeroAleatorio = parseInt(numeroAleatorio);
     let adivinanza = parseInt(document.getElementById("adivinanza").value);
+
+    if (adivinanza == numeroAleatorio){
+        console.log("Adivinaste el numero");
+    } 
+     else if(adivinanza > numeroAleatorio )
+    {
+        console.log("El numero Aleatorio es menor al que usted ingreso, intente de nuevo");
+    }
+    else if (adivinanza < numeroAleatorio)
+    {
+        console.log("El numero aleatorio es mayor al que usted ingreso, intente de nuevo");
+    }
+
+    console.log(numeroAleatorio)
+    
+}
+
+//Ejercicio 8
+
+function contarVocales(){
+    let palabra = document.getElementById("palabra").value;
+    palabra = palabra.toLowerCase();
+    let contadorVocales = 0;
+    for (let i = 0; i < palabra.length; i++) {
+        // Verificar si el carácter es una vocal
+        if ('aeiou'.includes(palabra[i])) {
+            contadorVocales++;
+        }
+    }
+
+    contadorVocales = parseInt (contadorVocales);
+    console.log("La palabra " + palabra + " tiene " + contadorVocales + " Vocales")
+}
+*/
+//Ejercicio 9
+
+function InvertirCadenaTexto(){
+    let palabraa = document.getElementById("palabraa").value;
+    console.log(palabraa)
+    let palabraInvertida = palabraa.split("").reverse().join("");
+    console.log (palabraInvertida);
+}
+
+//Ejercicio 10
+function VerificarPalindromo(){
+    let palabra = document.getElementById("palabra").value;
+    let palabraInvertida = palabra.split("").reverse().join("");
+    if(palabra==palabraInvertida){
+        console.log("la palabra " + palabra + " es igual a la invertida");
+    }else
+    {
+        console.log ("la palabra " + palabra + " no es igual a la invertida");
+    }
 }
